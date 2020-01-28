@@ -22,7 +22,6 @@ public slots:
     void SerialRecived();
 
 private slots:
-    void on_pushButton_clicked();
 
     void on_pushButton_VAC_clicked();
 
