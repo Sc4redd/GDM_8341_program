@@ -2,6 +2,7 @@
 #define MIERNIK_H
 
 #include <QDialog>
+#include <QTimer>
 #include "polaczenie.h"
 
 
@@ -17,9 +18,13 @@ public:
     explicit miernik(QWidget *parent = nullptr,polaczenie *Polaczeniee = nullptr);
     ~miernik();
     polaczenie *Polaczenie;
+    QTimer *timer;
+    QString pytanie;
+
 
 public slots:
     void SerialRecived();
+    void wyslijOdpytanie();
 
 private slots:
 
@@ -32,6 +37,8 @@ private slots:
     void on_pushButton_OHM_clicked();
 
     void on_pushButton_DIODE_clicked();
+
+    void on_pushButton_FREQ_clicked();
 
 private:
     Ui::miernik *ui;

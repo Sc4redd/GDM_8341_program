@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>220</width>
+    <width>283</width>
     <height>220</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Miernik DSM-8341</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QLabel" name="LabelMoja">
@@ -193,7 +193,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>220</width>
+     <width>283</width>
      <height>21</height>
     </rect>
    </property>

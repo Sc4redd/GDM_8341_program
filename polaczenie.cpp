@@ -50,7 +50,7 @@ Baud= Baud+1;
   //  WriteData("CONF:VOLT:DC\n");
 
  //   WriteData("MEAS:VOLT:DC?\n");
-     WriteData("*IDN?\n"); //informacje o mierniku
+      //informacje o mierniku
 }
 
 

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>379</width>
-    <height>408</height>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -89,6 +89,19 @@
    </property>
    <property name="text">
     <string>Diode</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_FREQ">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>130</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Freq</string>
    </property>
   </widget>
  </widget>
