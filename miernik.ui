@@ -104,6 +104,19 @@
     <string>Freq</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="pushButton_ZAPISZ">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Zapisz pomiar</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
