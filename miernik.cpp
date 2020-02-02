@@ -3,6 +3,7 @@
 #include "mainwindow.h"
 
 
+
 miernik::miernik(QWidget *parent, polaczenie *Polaczeniee) :
     QDialog(parent),
     ui(new Ui::miernik)
@@ -10,6 +11,7 @@ miernik::miernik(QWidget *parent, polaczenie *Polaczeniee) :
     ui->setupUi(this);
     Polaczenie = Polaczeniee;
     timers();
+
     pytanie = "*IDN?\n";
 
     connect(Polaczenie->serial,SIGNAL(readyRead()),this,SLOT(SerialRecived()));
@@ -117,4 +119,10 @@ void miernik::on_radio_pomiar_czasowy_clicked()
     }else{
         timer_meas->stop();
     }
+}
+
+void miernik::on_pushButton_EKSPORT_CSV_clicked()
+{
+    csv = new ToCsv();
+    csv->exportt(wiersz_tabeli,ui->table_wid_wyniki);
 }

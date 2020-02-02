@@ -20,12 +20,14 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     miernik.cpp \
-    polaczenie.cpp
+    polaczenie.cpp \
+    tocsv.cpp
 
 HEADERS += \
     mainwindow.h \
     miernik.h \
-    polaczenie.h
+    polaczenie.h \
+    tocsv.h
 
 FORMS += \
     mainwindow.ui \

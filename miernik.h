@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QTimer>
 #include "polaczenie.h"
+#include "tocsv.h"
 
 
 namespace Ui {
@@ -47,11 +48,14 @@ private slots:
 
     void on_radio_pomiar_czasowy_clicked();
 
+    void on_pushButton_EKSPORT_CSV_clicked();
+
 private:
     Ui::miernik *ui;
     void buduj_tabele();
     void timers();
     int wiersz_tabeli = 0;
+    ToCsv *csv;
 
 };
 
