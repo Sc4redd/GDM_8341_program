@@ -18,7 +18,8 @@ public:
     explicit miernik(QWidget *parent = nullptr,polaczenie *Polaczeniee = nullptr);
     ~miernik();
     polaczenie *Polaczenie;
-    QTimer *timer;
+    QTimer *timer_refresh;
+    QTimer *timer_meas;
     QString pytanie;
 
 
@@ -40,8 +41,17 @@ private slots:
 
     void on_pushButton_FREQ_clicked();
 
+    void on_pushButton_ZAPISZ_POMIAR_clicked();
+
+    void on_text_czestotliowsc_pomiaru_textChanged();
+
+    void on_radio_pomiar_czasowy_clicked();
+
 private:
     Ui::miernik *ui;
+    void buduj_tabele();
+    void timers();
+    int wiersz_tabeli = 0;
 
 };
 
