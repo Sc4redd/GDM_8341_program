@@ -1,8 +1,10 @@
 #include "polaczenie.h"
 
+
 polaczenie::polaczenie(const QByteArray &port,int Baud)
 {
     SerialConnect(port,Baud);
+    qDebug("Polaczono z portem :");
 }
 
 

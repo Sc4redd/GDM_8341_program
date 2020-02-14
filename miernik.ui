@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>379</width>
-    <height>628</height>
+    <width>401</width>
+    <height>694</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>301</width>
+     <width>381</width>
      <height>51</height>
     </rect>
    </property>
@@ -35,7 +35,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>80</y>
+     <y>70</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -60,60 +60,60 @@
   <widget class="QPushButton" name="pushButton_A">
    <property name="geometry">
     <rect>
-     <x>100</x>
-     <y>80</y>
+     <x>110</x>
+     <y>190</y>
      <width>81</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>A</string>
+    <string>A-AC/DC</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_OHM">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>80</y>
+     <x>210</x>
+     <y>70</y>
      <width>81</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>OHM</string>
+    <string>RESISTANCE</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_DIODE">
    <property name="geometry">
     <rect>
-     <x>280</x>
-     <y>80</y>
+     <x>310</x>
+     <y>70</y>
      <width>81</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Diode</string>
+    <string>DIODE</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_FREQ">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>210</x>
      <y>130</y>
      <width>81</width>
      <height>41</height>
     </rect>
    </property>
    <property name="text">
-    <string>Freq</string>
+    <string>FREQUENCY</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_ZAPISZ_POMIAR">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>210</y>
+     <x>20</x>
+     <y>290</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -129,7 +129,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>260</y>
+     <y>340</y>
      <width>141</width>
      <height>17</height>
     </rect>
@@ -142,7 +142,7 @@
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>260</y>
+     <y>330</y>
      <width>71</width>
      <height>31</height>
     </rect>
@@ -158,8 +158,8 @@ p, li { white-space: pre-wrap; }
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>260</y>
+     <x>170</x>
+     <y>340</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -172,7 +172,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>300</y>
+     <y>380</y>
      <width>111</width>
      <height>20</height>
     </rect>
@@ -184,8 +184,8 @@ p, li { white-space: pre-wrap; }
   <widget class="QPushButton" name="pushButton_EKSPORT_CSV">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>590</y>
+     <x>200</x>
+     <y>650</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -200,11 +200,102 @@ p, li { white-space: pre-wrap; }
   <widget class="QTableWidget" name="table_wid_wyniki">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>340</y>
-     <width>321</width>
+     <x>20</x>
+     <y>410</y>
+     <width>351</width>
      <height>231</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_VACDC">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>V-AC/DC</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_A_DC">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>130</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A-DC</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_A_AC">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>70</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>A-AC</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_CAPACITY">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>190</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CAPACITY</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_TEMP">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>130</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TEMPERATURE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_PERIOD">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>190</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PERIOD</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_CONTINUITY">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>250</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>CONTINUITY</string>
    </property>
   </widget>
  </widget>

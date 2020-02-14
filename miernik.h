@@ -50,6 +50,20 @@ private slots:
 
     void on_pushButton_EKSPORT_CSV_clicked();
 
+    void on_pushButton_VACDC_clicked();
+
+    void on_pushButton_A_AC_clicked();
+
+    void on_pushButton_A_DC_clicked();
+
+    void on_pushButton_CAPACITY_clicked();
+
+    void on_pushButton_TEMP_clicked();
+
+    void on_pushButton_PERIOD_clicked();
+
+    void on_pushButton_CONTINUITY_clicked();
+
 private:
     Ui::miernik *ui;
     void buduj_tabele();
