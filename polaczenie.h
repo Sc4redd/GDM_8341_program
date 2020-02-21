@@ -4,7 +4,7 @@
 #include <QSerialPort>
 
 
-class polaczenie
+class polaczenie : public QObject
 {
 
 
@@ -13,11 +13,7 @@ public:
      QSerialPort *serial;
      void WriteData(const QByteArray &data);
   void SerialConnect(const QByteArray &port,int Baud);
-
-
-
-
-
+    bool polaczono;
 };
 
 #endif // POLACZENIE_H

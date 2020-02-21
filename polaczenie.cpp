@@ -1,20 +1,24 @@
 #include "polaczenie.h"
+#include <QObject>
+#include <QMetaObject>
 
 
 polaczenie::polaczenie(const QByteArray &port,int Baud)
 {
     SerialConnect(port,Baud);
-    qDebug("Polaczono z portem :");
 }
 
 
 
 void polaczenie::SerialConnect(const QByteArray &port,int Baud)
 {
-Baud= Baud+1;
+    Baud= Baud+1;
+
     serial = new QSerialPort();
-   serial->setPortName(port);
-   switch (Baud) {
+
+    serial->setPortName(port);
+
+    switch (Baud) {
    case 1:
         serial->setBaudRate(QSerialPort::Baud1200);
        break;
@@ -41,18 +45,17 @@ Baud= Baud+1;
           break;
    }
 
-     serial->setDataBits(QSerialPort::Data8);
+    serial->setDataBits(QSerialPort::Data8);
+
     serial->setParity(QSerialPort::NoParity);
+
     serial->setStopBits(QSerialPort::OneStop);
+
     serial->setFlowControl(QSerialPort::NoFlowControl);
-    serial->open(QIODevice::ReadWrite);
 
+    polaczono = serial->open(QIODevice::ReadWrite);
+    if(polaczono) qDebug("Polaczono z portem %s ", port.toStdString().c_str());
 
-    // WriteData("*CLS\n");
-  //  WriteData("CONF:VOLT:DC\n");
-
- //   WriteData("MEAS:VOLT:DC?\n");
-      //informacje o mierniku
 }
 
 
@@ -61,5 +64,7 @@ void polaczenie::WriteData(const QByteArray &data)
 {
     serial->write(data);
 }
+
+
 
 

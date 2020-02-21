@@ -21,6 +21,7 @@ public:
     polaczenie *Polaczenie;
     QTimer *timer_refresh;
     QTimer *timer_meas;
+    QTimer *timer_odbioru;
     QString pytanie;
 
 
@@ -64,12 +65,18 @@ private slots:
 
     void on_pushButton_CONTINUITY_clicked();
 
+    void on_pushButton_clicked();
+
+    void onTimerOdbioruTimeout();
+
 private:
     Ui::miernik *ui;
     void buduj_tabele();
     void timers();
     int wiersz_tabeli = 0;
     ToCsv *csv;
+    QByteArray odebraneDane;
+    QByteArray Dane;
 
 };
 

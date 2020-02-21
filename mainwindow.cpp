@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
+#include <QMessageBox>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -21,14 +22,18 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QString ba =ui->port_box->currentText();
-    int bb = ui->bould_box->currentIndex();
-    Polaczenie = new polaczenie(ba.toUtf8(),bb);
+    Polaczenie = new polaczenie(ui->port_box->currentText().toUtf8(),ui->bould_box->currentIndex());
 
-
-   hide();
-   Miernik = new miernik(this, Polaczenie);
-   Miernik->show();
-
+    if(Polaczenie->polaczono){
+        hide();
+        Miernik = new miernik(this, Polaczenie);
+        Miernik->show();
+    }
+    else{
+        Polaczenie = nullptr;
+        QMessageBox msgBox;
+        msgBox.setText("Nie można połączyć się z portem");
+        msgBox.exec();
+    }
 }
 
